@@ -1,51 +1,53 @@
 <template>
-  <v-app id="inspire">
-    <v-app-bar app clipped-left>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
-    </v-app-bar>
+  <div>
+    <nuxt/>
+  </div>
+</template>
 
-    <v-navigation-drawer v-model="drawer" app clipped>
-      <v-list dense>
-        <v-list-item router v-for="(item, i) in items" :key="i" :to="item.to">
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>{{item.title}}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+<style>
+html {
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
 
-    <v-content>
-      <v-container fluid class="fill-height">
-        <nuxt />
-      </v-container>
-    </v-content>
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
 
-    <v-footer app>
-      <span>&copy; 2019</span>
-    </v-footer>
-  </v-app>
-</template> 
+.button--green {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #3b8070;
+  color: #3b8070;
+  text-decoration: none;
+  padding: 10px 30px;
+}
 
-<script>
-export default {
-  data() {
-    return {
-      drawer: null,
-      items: [
-        { icon: "apps", title: "Welcome", to: "/" },
-        { icon: "bubble_chart", title: "Inspire", to: "/inspire" },
-        { icon: "account_box", title: "Users", to: "/users" },
-        { icon: "group", title: "Chat", to: "/chat" }
-      ],
-      title: "Vuetify.js"
-    };
-  },
-  created() {
-    this.$vuetify.theme.dark = true;
-  }
-};
-</script>
+.button--green:hover {
+  color: #fff;
+  background-color: #3b8070;
+}
+
+.button--grey {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #35495e;
+  color: #35495e;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
+
+.button--grey:hover {
+  color: #fff;
+  background-color: #35495e;
+}
+</style>
+

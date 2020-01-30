@@ -12,8 +12,9 @@ module.exports = function isLoggedIn(req, res, next) {
   // from a logged-in user.  So we can safely proceed to the next policy--
   // or, if this is the last policy, the relevant action.
   if (req.session.userId) {
-    return next();
+   // return next();
   }
+  return next();
 
   //--•
   // Otherwise, this request did not come from a logged-in user.

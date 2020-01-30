@@ -29,7 +29,7 @@ process.chdir(__dirname);
 /**
  * This is Important for the @nuxtjs/axios router
  */
-process.env.API_URL = process.env.API_URL || 'http://localhost:1337/api';
+process.env.API_URL = process.env.API_URL;
 
 
 // Attempt to import `sails` dependency, as well as `rc` (for loading `.sailsrc` files).

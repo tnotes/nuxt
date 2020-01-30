@@ -14,13 +14,15 @@
     "sails": "~1.2.3",
     "sails-hook-orm": "~2.1.1",
     "sails-hook-sockets": "~2.0.0",
+    "sails-mongo": "^1.0.1",
     "sails.io.js": "~1.2.1",
+    "semantic-ui-css": "^2.4.0",
+    "semantic-ui-vue": "^0.4.0",
     "socket.io": "~2.3.0",
     "vue": "~2.6.10",
     "vue-server-renderer": "~2.6.10",
     "vue-socket.io": "~3.0.7",
-    "vue-template-compiler": "~2.6.10",
-    "vuetify": "~2.1.5"
+    "vue-template-compiler": "~2.6.10"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.9.0",
